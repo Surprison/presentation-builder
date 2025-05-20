@@ -1,0 +1,170 @@
+/* Сброс стандартных отступов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Подключаем шрифт Montserrat, либо используем системный */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  background-color: #f3f3f3;
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Секции */
+.section {
+  padding: 60px 0;
+}
+
+/* Скрытые элементы */
+.hidden {
+  display: none;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+.nav-links li {
+  margin-left: 15px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #007BFF;
+}
+.status {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Форма и кнопки */
+.form {
+  max-width: 500px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.btn {
+  display: inline-block;
+  background: #007BFF;
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #0056b3;
+}
+.msg {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #e74c3c;
+}
+
+/* Таблица презентаций */
+.table-container {
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+table th,
+table td {
+  text-align: left;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+}
+table th {
+  background: #007BFF;
+  color: #fff;
+}
+table tr:nth-child(even) {
+  background: #f7f7f7;
+}
+
+/* Раздел просмотра презентации */
+.presentation-container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.slide-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.slide-content {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.slide-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+  }
+  .nav-links li {
+    margin: 5px 0;
+  }
+  .presentation-container {
+    padding: 20px;
+  }
+  .slide-title {
+    font-size: 1.8rem;
+  }
+}

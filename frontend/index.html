@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentation Builder</title>
+  <!-- Подключение стилей -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Можно подключить Google Fonts, если хотите -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Навигационное меню -->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo">Presentation Builder</a>
+        <ul class="nav-links">
+          <li><a id="authLink" href="#">Регистрация/Авторизация</a></li>
+          <li><a id="genLink" href="#">Создать презентацию</a></li>
+          <li><a id="listLink" href="#">Мои презентации</a></li>
+        </ul>
+        <div id="userStatus" class="status">Вы не вошли</div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Раздел аутентификации -->
+  <section id="authSection" class="section">
+    <div class="container">
+      <h2>Регистрация / Авторизация</h2>
+      <div class="auth-forms">
+        <!-- Форма регистрации -->
+        <form id="registerForm" class="form">
+          <h3>Регистрация</h3>
+          <input type="text" id="regUsername" placeholder="Имя пользователя" required />
+          <input type="password" id="regPassword" placeholder="Пароль" required />
+          <button type="submit" class="btn">Зарегистрироваться</button>
+          <div id="registerMsg" class="msg"></div>
+        </form>
+        <!-- Форма авторизации -->
+        <form id="loginForm" class="form">
+          <h3>Авторизация</h3>
+          <input type="text" id="loginUsername" placeholder="Имя пользователя" required />
+          <input type="password" id="loginPassword" placeholder="Пароль" required />
+          <button type="submit" class="btn">Войти</button>
+          <div id="loginMsg" class="msg"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Раздел создания презентации -->
+  <section id="genSection" class="section hidden">
+    <div class="container">
+      <h2>Создать новую презентацию</h2>
+      <form id="presentationForm" class="form">
+        <input type="text" id="presentationTheme" placeholder="Введите тему презентации" required />
+        <input type="number" id="presentationPages" placeholder="Количество слайдов" required />
+        <button type="submit" class="btn">Создать презентацию</button>
+        <div id="presentationMsg" class="msg"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Раздел "Мои презентации" -->
+  <section id="listSection" class="section hidden">
+    <div class="container">
+      <h2>Мои презентации</h2>
+      <div class="table-container">
+        <table id="presentationsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Тема</th>
+              <th>Слайды</th>
+              <th>Действия</th>
+            </tr>
+          </thead>
+          <tbody id="presentationsList">
+            <!-- Строки будут динамически добавляться -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Раздел просмотра презентации -->
+  <section id="viewPresentationSection" class="section hidden">
+    <div class="container">
+      <h2>Просмотр презентации</h2>
+      <div id="presentationContainer" class="presentation-container">
+        <div id="slideTitle" class="slide-title"></div>
+        <div id="slideContent" class="slide-content"></div>
+        <div class="slide-controls">
+          <button id="prevSlide" class="btn">Назад</button>
+          <button id="editSlide" class="btn">Редактировать слайд</button>
+          <button id="nextSlide" class="btn">Вперед</button>
+          <button id="closePresentationView" class="btn">Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
